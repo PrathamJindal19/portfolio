@@ -26,9 +26,9 @@ export default function CTASection() {
       className="flex scroll-mt-24 flex-col items-center gap-16 py-4"
     >
       <div className="flex flex-col items-center gap-2.5 text-center">
-        <h2 className="gradient-heading font-serifless text-[32px] leading-[1.15] tracking-[-1.28px]">
-          Let’s Talk Design{" "}
-          <span className="text-white/55">(Not the usual kind)</span>
+        <h2 className="font-serifless text-[32px] leading-[1.15] tracking-[-1.28px]">
+          <span className="gradient-heading block">Let’s Talk Design</span>
+          <span className="block text-white/55">(Not the usual kind)</span>
         </h2>
         <p className="font-tight text-[15px] leading-[1.5] text-white/65">
           Book a call and see how simple it can get.
