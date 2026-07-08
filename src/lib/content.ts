@@ -2,7 +2,7 @@ export const profile = {
   name: "Pratham",
   greeting: "Hi 👋, I’m Pratham",
   avatar: "/assets/avatar.png",
-  twitter: "https://twitter.com",
+  twitter: "https://x.com/prathamdesigns",
   email: "jindalpratham07@gmail.com",
   calLink: "pratham-jindal-2026/website",
   calNamespace: "website",

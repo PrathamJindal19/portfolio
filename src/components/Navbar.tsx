@@ -28,7 +28,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-line bg-background/80 backdrop-blur-md">
+    <header className="sticky top-0 z-30 hidden border-b border-line bg-background/80 backdrop-blur-md lg:block">
       <nav className="flex h-[88px] items-center justify-between pl-4 pr-7">
         <div className="flex items-center">
           {navItems.map((item) => {

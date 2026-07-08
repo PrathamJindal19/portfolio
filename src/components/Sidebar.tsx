@@ -51,6 +51,22 @@ export default function Sidebar() {
         <p className="text-[14px] leading-[1.5] tracking-[-0.14px] text-white/45">
           {profile.tagline}
         </p>
+
+        <a
+          href="#book"
+          className="mt-2 flex w-full items-center justify-center gap-2.5 rounded-lg border border-light-90 bg-light-98 px-4 py-3 transition-transform active:scale-[0.99] lg:hidden"
+        >
+          <Image
+            src="/assets/googlemeet.svg"
+            alt=""
+            width={22}
+            height={18}
+            className="h-[18px] w-auto"
+          />
+          <span className="text-[16px] font-medium leading-[1.15] text-black">
+            Book a call
+          </span>
+        </a>
       </div>
 
       <div className="hidden flex-1 lg:block" />
