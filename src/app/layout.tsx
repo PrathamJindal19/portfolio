@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Inter_Tight, Caveat } from "next/font/google";
 import "./globals.css";
+import ImageGuard from "@/components/ImageGuard";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -36,7 +37,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${interTight.variable} ${caveat.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-background text-foreground">{children}</body>
+      <body className="min-h-full bg-background text-foreground">
+        <ImageGuard />
+        {children}
+      </body>
     </html>
   );
 }

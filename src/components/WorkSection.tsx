@@ -8,6 +8,7 @@ function Tile({ src, alt }: { src: string; alt: string }) {
         src={src}
         alt={alt}
         fill
+        draggable={false}
         sizes="(max-width: 1024px) 100vw, 480px"
         className="object-cover"
       />
@@ -31,7 +32,7 @@ export default function WorkSection() {
               className="flex w-full items-center overflow-hidden rounded-[4px]"
               style={{ background: row.bg }}
             >
-              <div className="w-full px-6 py-8 sm:px-16 lg:px-[100px]">
+              <div className="w-full px-[8%] py-[6%]">
                 <Tile src={row.tile.src} alt={row.tile.alt} />
               </div>
             </div>

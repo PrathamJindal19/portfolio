@@ -29,6 +29,17 @@
   box-sizing: border-box;
 }
 
+/* Prevent image saving/dragging: no drag ghost, no long-press callout, no selection */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
