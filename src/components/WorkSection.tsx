@@ -9,7 +9,7 @@ function Tile({ src, alt }: { src: string; alt: string }) {
         alt={alt}
         fill
         draggable={false}
-        sizes="(max-width: 1024px) 100vw, 480px"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 45vw"
         className="object-cover"
       />
     </div>

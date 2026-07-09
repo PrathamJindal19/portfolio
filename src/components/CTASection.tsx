@@ -44,15 +44,7 @@ export default function CTASection() {
         />
       </div>
 
-      <p className="text-center font-tight text-[18px] leading-[1.5] text-white/80">
-        or Email us at{" "}
-        <a
-          href={`mailto:${profile.email}`}
-          className="text-white underline decoration-solid underline-offset-2"
-        >
-          {profile.email}
-        </a>
-      </p>
+      
     </section>
   );
 }

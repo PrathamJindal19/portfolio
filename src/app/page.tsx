@@ -15,7 +15,7 @@ export default function Home() {
 
       <main className="min-w-0 flex-1 bg-background">
         <Navbar />
-        <div className="mx-auto flex max-w-[1040px] flex-col gap-14 px-4 py-10 sm:px-7">
+        <div className="flex w-full flex-col gap-14 px-4 py-10 sm:px-7">
           <WorkSection />
           <Divider />
           <Testimonials />
