@@ -47,6 +47,7 @@ export default function Testimonials() {
               className={`h-[23px] w-auto object-contain ${
                 t.logo.blend ? "mix-blend-plus-lighter" : ""
               }`}
+              style={"white" in t.logo && t.logo.white ? { filter: "brightness(0) invert(1)" } : undefined}
             />
           </div>
         </article>
