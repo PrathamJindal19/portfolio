@@ -1,35 +1,60 @@
+// content.ts — single source of truth for all portfolio copy, data, and assets.
+// Import individual exports in components to keep content changes centralised here.
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Profile — personal info, social links, and sidebar copy
+// ─────────────────────────────────────────────────────────────────────────────
 export const profile = {
   name: "Pratham",
-  greeting: "Hi 👋, I’m Pratham",
+  greeting: "Hi 👋, I'm Pratham",
   avatar: "/assets/avatar.webp",
   twitter: "https://x.com/prathamdesigns",
   email: "jindalpratham07@gmail.com",
+  // Cal.com booking link slug (used in CTASection)
   calLink: "pratham-jindal-2026/website",
+  // Cal.com embed namespace — must match the namespace passed to getCalApi()
   calNamespace: "website",
+  // Availability badge shown beneath the pulsing dot in the Sidebar
   spots: "3 Spots Available",
+  // Headline rendered as separate spans so each segment can be dimmed independently
   headline: [
     { text: "Design for products ", dim: false },
-    { text: "that don’t have time to ", dim: true },
+    { text: "that don't have time to ", dim: true },
     { text: "look ", dim: true },
     { text: "average.", dim: false },
   ],
+  // One-liner tagline shown beneath the headline and used in page metadata
   tagline:
     "Helping SaaS and AI startups turn complex products into websites people understand and remember.",
 };
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Client logos — displayed in the 2-column grid at the bottom of the Sidebar.
+// w/h are the intrinsic pixel dimensions of each image file.
+// ─────────────────────────────────────────────────────────────────────────────
 export const clientLogos = [
   { src: "/assets/client1.webp", alt: "Client logo", w: 141, h: 29 },
   { src: "/assets/client2.webp", alt: "Client logo", w: 102, h: 24 },
   { src: "/assets/client3.webp", alt: "Client logo", w: 155, h: 28 },
-  { src: "/assets/client4.webp", alt: "Client logo", w: 58, h: 26 },
+  { src: "/assets/client4.webp", alt: "Client logo", w:  58, h: 26 },
 ];
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Work rows — the portfolio gallery in WorkSection.
+//
+// Two row types:
+//   "pair" — two tiles side-by-side, sharing an averaged aspect ratio so they
+//            render at the same height regardless of their original dimensions.
+//   "full" — one tile spanning the full width, displayed on a custom bg colour
+//            with generous padding to give it a framed, presentational look.
+// ─────────────────────────────────────────────────────────────────────────────
 type WorkTile = { src: string; alt: string; w: number; h: number };
 type WorkRow =
   | { type: "pair"; tiles: [WorkTile, WorkTile] }
-  | { type: "full"; tile: WorkTile; bg: string };
+  | { type: "full"; tile: WorkTile; bg: string }; // bg is a CSS color string
 
 export const workRows: WorkRow[] = [
+  // ── FlyingPress ──────────────────────────────────────────────────────────
   {
     "type": "full",
     "tile": {
@@ -91,6 +116,7 @@ export const workRows: WorkRow[] = [
       }
     ]
   },
+  // ── Sternify ─────────────────────────────────────────────────────────────
   {
     "type": "full",
     "tile": {
@@ -135,6 +161,7 @@ export const workRows: WorkRow[] = [
       }
     ]
   },
+  // ── FlyingHost ───────────────────────────────────────────────────────────
   {
     "type": "pair",
     "tiles": [
@@ -179,6 +206,7 @@ export const workRows: WorkRow[] = [
       }
     ]
   },
+  // ── Misc SaaS work ────────────────────────────────────────────────────────
   {
     "type": "pair",
     "tiles": [
@@ -274,6 +302,7 @@ export const workRows: WorkRow[] = [
       }
     ]
   },
+  // ── Socify / SageBio ─────────────────────────────────────────────────────
   {
     "type": "pair",
     "tiles": [
@@ -308,6 +337,7 @@ export const workRows: WorkRow[] = [
       }
     ]
   },
+  // ── Bento grids ──────────────────────────────────────────────────────────
   {
     "type": "pair",
     "tiles": [
@@ -327,6 +357,13 @@ export const workRows: WorkRow[] = [
   }
 ];
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Testimonials — client review cards shown in the Testimonials section.
+//
+// Logo options:
+//   blend?: true  → apply mix-blend-plus-lighter (good for light logos on dark bg)
+//   white?: true  → CSS brightness(0) invert(1) to force logo to pure white
+// ─────────────────────────────────────────────────────────────────────────────
 export const testimonials = [
   {
     quote:
@@ -351,7 +388,10 @@ export const testimonials = [
   },
 ];
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Nav items — links rendered in the Navbar; hrefs are in-page anchors.
+// ─────────────────────────────────────────────────────────────────────────────
 export const navItems = [
-  { label: "Work", href: "#work" },
+  { label: "Work",         href: "#work" },
   { label: "Testimonials", href: "#testimonials" },
 ];
