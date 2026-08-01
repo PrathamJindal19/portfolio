@@ -3,7 +3,6 @@
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
 import WorkSection from "@/components/WorkSection";
-import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/CTASection";
 
 // Thin horizontal rule used to visually separate main content sections
@@ -27,9 +26,6 @@ export default function Home() {
         <div className="flex w-full flex-col gap-14 px-4 py-10 sm:px-7">
           {/* Portfolio image grid */}
           <WorkSection />
-          <Divider />
-          {/* Client testimonial cards */}
-          <Testimonials />
           <Divider />
           {/* Booking calendar embed */}
           <CTASection />

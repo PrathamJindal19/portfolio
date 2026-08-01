@@ -54,14 +54,14 @@ type WorkRow =
   | { type: "full"; tile: WorkTile; bg: string }; // bg is a CSS color string
 
 export const workRows: WorkRow[] = [
-  // ── FlyingPress ──────────────────────────────────────────────────────────
+  // ── Featured — Speed SaaS ────────────────────────────────────────────────
   {
     "type": "full",
     "tile": {
-      "src": "/assets/flyingpress-hero-final.webp",
-      "alt": "FlyingPress — Premium Speed Optimization Hero Design",
-      "w": 2880,
-      "h": 2332
+      "src": "/assets/speed-hero.webp",
+      "alt": "Premium Speed Optimization Hero Design",
+      "w": 3120,
+      "h": 2542
     },
     "bg": "#0b0f19"
   },
@@ -69,16 +69,16 @@ export const workRows: WorkRow[] = [
     "type": "pair",
     "tiles": [
       {
-        "src": "/assets/integrations-flyingpress.webp",
-        "alt": "FlyingPress — WordPress Integrations",
-        "w": 2880,
-        "h": 1640
+        "src": "/assets/speed-integrations.webp",
+        "alt": "WordPress Integrations Section",
+        "w": 3120,
+        "h": 1880
       },
       {
-        "src": "/assets/testimonials-flyingpress.webp",
-        "alt": "FlyingPress — Client Testimonials Section",
+        "src": "/assets/speed-social-proof.webp",
+        "alt": "Client Social Proof Section",
         "w": 2880,
-        "h": 1640
+        "h": 1568
       }
     ]
   },
@@ -86,16 +86,16 @@ export const workRows: WorkRow[] = [
     "type": "pair",
     "tiles": [
       {
-        "src": "/assets/rejected-section-flyingpress.webp",
-        "alt": "FlyingPress — Concept Section Exploration",
+        "src": "/assets/speed-concept-section.webp",
+        "alt": "Concept Section Exploration",
         "w": 2880,
         "h": 2078
       },
       {
-        "src": "/assets/pricing-page-flyingpress.webp",
-        "alt": "FlyingPress — High Conversion Pricing Structure",
+        "src": "/assets/speed-pricing.webp",
+        "alt": "High Conversion Pricing Structure",
         "w": 2880,
-        "h": 2082
+        "h": 2088
       }
     ]
   },
@@ -103,14 +103,14 @@ export const workRows: WorkRow[] = [
     "type": "pair",
     "tiles": [
       {
-        "src": "/assets/cta-and-footer-flyingpress.webp",
-        "alt": "FlyingPress — CTA Section & Clean Footer",
+        "src": "/assets/speed-cta-footer.webp",
+        "alt": "CTA Section & Clean Footer",
         "w": 2880,
         "h": 2444
       },
       {
-        "src": "/assets/benefits-flyingpress.webp",
-        "alt": "FlyingPress — Performance Benefits & Advantages",
+        "src": "/assets/speed-benefits.webp",
+        "alt": "Performance Benefits & Advantages",
         "w": 2928,
         "h": 2662
       }
@@ -158,6 +158,23 @@ export const workRows: WorkRow[] = [
         "alt": "Sternify — Multi-Tool System Architecture",
         "w": 2880,
         "h": 2326
+      }
+    ]
+  },
+  {
+    "type": "pair",
+    "tiles": [
+      {
+        "src": "/assets/sternify-illustrations.webp",
+        "alt": "Sternify — Custom Illustration Set",
+        "w": 3488,
+        "h": 2784
+      },
+      {
+        "src": "/assets/hero-option.webp",
+        "alt": "SaaS — Alternative Hero Layout",
+        "w": 2880,
+        "h": 2450
       }
     ]
   },
@@ -225,6 +242,23 @@ export const workRows: WorkRow[] = [
     ]
   },
   {
+    "type": "pair",
+    "tiles": [
+      {
+        "src": "/assets/illustrations-july-19.webp",
+        "alt": "SaaS — Product Illustration Collection",
+        "w": 3268,
+        "h": 2572
+      },
+      {
+        "src": "/assets/illustrations-july-20.webp",
+        "alt": "SaaS — Feature Illustration Set",
+        "w": 3268,
+        "h": 2572
+      }
+    ]
+  },
+  {
     "type": "full",
     "tile": {
       "src": "/assets/finalised-dashboard-5-june-9.webp",
@@ -286,6 +320,16 @@ export const workRows: WorkRow[] = [
     ]
   },
   {
+    "type": "full",
+    "tile": {
+      "src": "/assets/ecomelixir-comparison.webp",
+      "alt": "EcomElixir — Competitor Comparison Section",
+      "w": 4320,
+      "h": 2901
+    },
+    "bg": "#0d0e12"
+  },
+  {
     "type": "pair",
     "tiles": [
       {
@@ -342,8 +386,8 @@ export const workRows: WorkRow[] = [
     "type": "pair",
     "tiles": [
       {
-        "src": "/assets/flyingpress-bento.webp",
-        "alt": "FlyingPress — Bento Grid Features Showcase",
+        "src": "/assets/speed-bento.webp",
+        "alt": "Bento Grid Features Showcase",
         "w": 2880,
         "h": 3626
       },
@@ -358,40 +402,8 @@ export const workRows: WorkRow[] = [
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Testimonials — client review cards shown in the Testimonials section.
-//
-// Logo options:
-//   blend?: true  → apply mix-blend-plus-lighter (good for light logos on dark bg)
-//   white?: true  → CSS brightness(0) invert(1) to force logo to pure white
-// ─────────────────────────────────────────────────────────────────────────────
-export const testimonials = [
-  {
-    quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-    client: "Parham Dehghani",
-    avatar: "/assets/avatar-parham.png",
-    logo: { src: "/assets/logo_image2.webp", alt: "Company", w: 97, h: 23, blend: true, white: true },
-  },
-  {
-    quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-    client: "Gijo Varghese",
-    avatar: "/assets/avatar-gijo.png",
-    logo: { src: "/assets/logo_image1.webp", alt: "Company", w: 114, h: 23 },
-  },
-  {
-    quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-    client: "Gerard Vacas",
-    avatar: "/assets/avatar-gerard.png",
-    logo: { src: "/assets/logo_group4.svg", alt: "Company", w: 49, h: 22 },
-  },
-];
-
-// ─────────────────────────────────────────────────────────────────────────────
 // Nav items — links rendered in the Navbar; hrefs are in-page anchors.
 // ─────────────────────────────────────────────────────────────────────────────
 export const navItems = [
-  { label: "Work",         href: "#work" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Work", href: "#work" },
 ];
