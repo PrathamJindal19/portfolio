@@ -35,7 +35,6 @@ export const profile = {
 export const clientLogos = [
   { src: "/assets/client1.webp", alt: "Client logo", w: 141, h: 29 },
   { src: "/assets/client2.webp", alt: "Client logo", w: 102, h: 24 },
-  { src: "/assets/client3.webp", alt: "Client logo", w: 155, h: 28 },
   { src: "/assets/client4.webp", alt: "Client logo", w:  58, h: 26 },
 ];
 

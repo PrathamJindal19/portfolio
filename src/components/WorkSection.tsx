@@ -1,6 +1,6 @@
 // WorkSection — renders the portfolio image gallery.
 // Images are organised in "rows" from content.ts; each row is either:
-//   • "full"  — a single full-width image with a custom background colour
+//   • "full"  — a single full-width image, edge-to-edge with no padding
 //   • "pair"  — two images side-by-side that share a unified aspect ratio
 
 import Image from "next/image";
@@ -99,24 +99,14 @@ export default function WorkSection() {
               </div>
             );
           } else {
-            // "full" row: tinted background (row.bg) with generous horizontal/vertical
-            // padding to give the image a framed, presentational feel
             return (
-              <div
+              <Tile
                 key={i}
-                className="flex w-full items-center overflow-hidden rounded-[4px]"
-                style={{ background: row.bg }}
-              >
-                {/* Inner padding wrapper — 8% horizontal, 6% vertical of container width */}
-                <div className="w-full px-[8%] py-[6%]">
-                  <Tile
-                    src={row.tile.src}
-                    alt={row.tile.alt}
-                    w={row.tile.w}
-                    h={row.tile.h}
-                  />
-                </div>
-              </div>
+                src={row.tile.src}
+                alt={row.tile.alt}
+                w={row.tile.w}
+                h={row.tile.h}
+              />
             );
           }
         })}
