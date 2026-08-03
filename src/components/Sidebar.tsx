@@ -64,11 +64,10 @@ export default function Sidebar() {
           {profile.tagline}
         </p>
 
-        {/* "Book a call" CTA button — shown only on mobile (lg:hidden);
-            desktop users use the Navbar CTA instead */}
+        {/* "Book a call" CTA — same as Navbar, visible on all screen sizes */}
         <a
           href="#book"
-          className="mt-2 flex w-full items-center justify-center gap-2.5 rounded-lg border border-light-90 bg-light-98 px-4 py-3 transition-transform active:scale-[0.99] lg:hidden"
+          className="flex items-center gap-2.5 self-start rounded-lg border border-light-90 bg-light-98 px-4 py-2.5 transition-transform hover:-translate-y-0.5"
         >
           <Image
             src="/assets/googlemeet.svg"
