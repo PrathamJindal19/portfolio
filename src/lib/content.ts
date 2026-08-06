@@ -55,46 +55,36 @@ type WorkRow =
 export const workRows: WorkRow[] = [
   // ── Featured — Speed SaaS ────────────────────────────────────────────────
   {
-    "type": "full",
-    "tile": {
-      "src": "/assets/speed-hero.webp",
-      "alt": "Premium Speed Optimization Hero Design",
-      "w": 3120,
-      "h": 2542
-    },
-    "bg": "#0b0f19"
-  },
-  {
     "type": "pair",
     "tiles": [
+      {
+        "src": "/assets/speed-hero.webp",
+        "alt": "Premium Speed Optimization Hero Design",
+        "w": 3120,
+        "h": 2542
+      },
       {
         "src": "/assets/speed-integrations.webp",
         "alt": "WordPress Integrations Section",
         "w": 3120,
         "h": 1880
-      },
+      }
+    ]
+  },
+  {
+    "type": "pair",
+    "tiles": [
       {
         "src": "/assets/speed-social-proof.webp",
         "alt": "Client Social Proof Section",
         "w": 2880,
         "h": 1568
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
+      },
       {
         "src": "/assets/speed-concept-section.webp",
         "alt": "Concept Section Exploration",
         "w": 2880,
         "h": 2078
-      },
-      {
-        "src": "/assets/speed-pricing.webp",
-        "alt": "High Conversion Pricing Structure",
-        "w": 2880,
-        "h": 2088
       }
     ]
   },
@@ -102,30 +92,37 @@ export const workRows: WorkRow[] = [
     "type": "pair",
     "tiles": [
       {
+        "src": "/assets/speed-pricing.webp",
+        "alt": "High Conversion Pricing Structure",
+        "w": 2880,
+        "h": 2088
+      },
+      {
         "src": "/assets/speed-cta-footer.webp",
         "alt": "CTA Section & Clean Footer",
         "w": 2880,
         "h": 2444
-      },
+      }
+    ]
+  },
+  {
+    "type": "pair",
+    "tiles": [
       {
         "src": "/assets/speed-benefits.webp",
         "alt": "Performance Benefits & Advantages",
         "w": 2928,
         "h": 2662
+      },
+      {
+        "src": "/assets/sternify-hero.webp",
+        "alt": "Sternify — Main Hero Section Design",
+        "w": 2880,
+        "h": 2118
       }
     ]
   },
   // ── Sternify ─────────────────────────────────────────────────────────────
-  {
-    "type": "full",
-    "tile": {
-      "src": "/assets/sternify-hero.webp",
-      "alt": "Sternify — Main Hero Section Design",
-      "w": 2880,
-      "h": 2118
-    },
-    "bg": "#0d0e12"
-  },
   {
     "type": "pair",
     "tiles": [
@@ -195,16 +192,7 @@ export const workRows: WorkRow[] = [
       }
     ]
   },
-  {
-    "type": "full",
-    "tile": {
-      "src": "/assets/hero-flyinghost.webp",
-      "alt": "FlyingHost — Hosting Service Hero Showcase",
-      "w": 3280,
-      "h": 2422
-    },
-    "bg": "#0d0e12"
-  },
+
   {
     "type": "pair",
     "tiles": [
@@ -219,6 +207,24 @@ export const workRows: WorkRow[] = [
         "alt": "Bento — Pink Accent Interactive Dashboard Section",
         "w": 2880,
         "h": 2958
+      }
+    ]
+  },
+  // ── Bento grids ──────────────────────────────────────────────────────────
+  {
+    "type": "pair",
+    "tiles": [
+      {
+        "src": "/assets/speed-bento.webp",
+        "alt": "Bento Grid Features Showcase",
+        "w": 2880,
+        "h": 3626
+      },
+      {
+        "src": "/assets/klink-bento.webp",
+        "alt": "Klink — Multi-purpose Bento Grid Features",
+        "w": 2880,
+        "h": 3844
       }
     ]
   },
@@ -258,14 +264,21 @@ export const workRows: WorkRow[] = [
     ]
   },
   {
-    "type": "full",
-    "tile": {
-      "src": "/assets/finalised-dashboard-5-june-9.webp",
-      "alt": "Dashboard — June Finalised SaaS UI",
-      "w": 3024,
-      "h": 1958
-    },
-    "bg": "#090d16"
+    "type": "pair",
+    "tiles": [
+      {
+        "src": "/assets/finalised-dashboard-5-june-9.webp",
+        "alt": "Dashboard — June Finalised SaaS UI",
+        "w": 3024,
+        "h": 1958
+      },
+      {
+        "src": "/assets/ecomelixir-comparison.webp",
+        "alt": "EcomElixir — Competitor Comparison Section",
+        "w": 4320,
+        "h": 2901
+      }
+    ]
   },
   {
     "type": "pair",
@@ -319,16 +332,6 @@ export const workRows: WorkRow[] = [
     ]
   },
   {
-    "type": "full",
-    "tile": {
-      "src": "/assets/ecomelixir-comparison.webp",
-      "alt": "EcomElixir — Competitor Comparison Section",
-      "w": 4320,
-      "h": 2901
-    },
-    "bg": "#0d0e12"
-  },
-  {
     "type": "pair",
     "tiles": [
       {
@@ -380,21 +383,20 @@ export const workRows: WorkRow[] = [
       }
     ]
   },
-  // ── Bento grids ──────────────────────────────────────────────────────────
   {
     "type": "pair",
     "tiles": [
       {
-        "src": "/assets/speed-bento.webp",
-        "alt": "Bento Grid Features Showcase",
-        "w": 2880,
-        "h": 3626
+        "src": "/assets/unicorn hero 13 apr.webp",
+        "alt": "Unicorn — SaaS Hero Section Design",
+        "w": 3280,
+        "h": 2260
       },
       {
-        "src": "/assets/klink-bento.webp",
-        "alt": "Klink — Multi-purpose Bento Grid Features",
-        "w": 2880,
-        "h": 3844
+        "src": "/assets/hero-flyinghost.webp",
+        "alt": "FlyingHost — Hosting Service Hero Showcase",
+        "w": 3280,
+        "h": 2422
       }
     ]
   }
