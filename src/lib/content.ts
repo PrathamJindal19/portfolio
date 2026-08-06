@@ -54,6 +54,24 @@ type WorkRow =
 
 export const workRows: WorkRow[] = [
   // ── Featured — Speed SaaS ────────────────────────────────────────────────
+  // Paired by closest aspect ratio to minimise height gaps
+  {
+    "type": "pair",
+    "tiles": [
+      {
+        "src": "/assets/speed-benefits.webp",
+        "alt": "Performance Benefits & Advantages",
+        "w": 2928,
+        "h": 2662
+      },
+      {
+        "src": "/assets/speed-cta-footer.webp",
+        "alt": "CTA Section & Clean Footer",
+        "w": 2880,
+        "h": 2444
+      }
+    ]
+  },
   {
     "type": "pair",
     "tiles": [
@@ -62,6 +80,23 @@ export const workRows: WorkRow[] = [
         "alt": "Premium Speed Optimization Hero Design",
         "w": 3120,
         "h": 2542
+      },
+      {
+        "src": "/assets/speed-pricing.webp",
+        "alt": "High Conversion Pricing Structure",
+        "w": 2880,
+        "h": 2088
+      }
+    ]
+  },
+  {
+    "type": "pair",
+    "tiles": [
+      {
+        "src": "/assets/speed-concept-section.webp",
+        "alt": "Concept Section Exploration",
+        "w": 2880,
+        "h": 2078
       },
       {
         "src": "/assets/speed-integrations.webp",
@@ -81,44 +116,10 @@ export const workRows: WorkRow[] = [
         "h": 1568
       },
       {
-        "src": "/assets/speed-concept-section.webp",
-        "alt": "Concept Section Exploration",
+        "src": "/assets/sternify-hero-v2.webp",
+        "alt": "Sternify — Alternative Hero Option v2",
         "w": 2880,
-        "h": 2078
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/speed-pricing.webp",
-        "alt": "High Conversion Pricing Structure",
-        "w": 2880,
-        "h": 2088
-      },
-      {
-        "src": "/assets/speed-cta-footer.webp",
-        "alt": "CTA Section & Clean Footer",
-        "w": 2880,
-        "h": 2444
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/speed-benefits.webp",
-        "alt": "Performance Benefits & Advantages",
-        "w": 2928,
-        "h": 2662
-      },
-      {
-        "src": "/assets/sternify-hero.webp",
-        "alt": "Sternify — Main Hero Section Design",
-        "w": 2880,
-        "h": 2118
+        "h": 1826
       }
     ]
   },
