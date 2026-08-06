@@ -34,7 +34,7 @@ function Tile({
     // so the top of each screenshot is always visible even when cropped
     return (
       <div
-        className="relative w-full overflow-hidden rounded-[4px]"
+        className="relative w-full overflow-hidden rounded-[4px] bg-[#0d0d0d]"
         style={{ aspectRatio }}
       >
         <Image
@@ -43,7 +43,7 @@ function Tile({
           fill
           draggable={false}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 45vw"
-          className="object-cover object-top"
+          className="object-contain"
         />
       </div>
     );
