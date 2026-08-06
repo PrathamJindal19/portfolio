@@ -43,7 +43,7 @@ function Tile({
           fill
           draggable={false}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 45vw"
-          className="object-cover"
+          className="object-cover object-top"
         />
       </div>
     );
@@ -87,14 +87,14 @@ export default function WorkSection() {
                   alt={row.tiles[0].alt}
                   w={row.tiles[0].w}
                   h={row.tiles[0].h}
-                  aspectRatio={row.tiles[0].w / row.tiles[0].h}
+                  aspectRatio={avgRatio}
                 />
                 <Tile
                   src={row.tiles[1].src}
                   alt={row.tiles[1].alt}
                   w={row.tiles[1].w}
                   h={row.tiles[1].h}
-                  aspectRatio={row.tiles[1].w / row.tiles[1].h}
+                  aspectRatio={avgRatio}
                 />
               </div>
             );
