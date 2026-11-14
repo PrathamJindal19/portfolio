@@ -8,7 +8,7 @@ import RealEstateSection from "@/components/RealEstateSection";
 import CTASection from "@/components/CTASection";
 
 function Divider() {
-    return <hr className="border-0 border-t border-line" />;
+    return <hr className="border-0 border-t border-[#232323]" />;
 }
 
 export default function Home() {
@@ -28,14 +28,16 @@ export default function Home() {
                     onNavigate={handleNavigate}
                 />
 
-                <div className="flex w-full flex-col gap-14 px-4 py-10 sm:px-7">
+                <div className="flex w-full flex-col gap-14 p-[24px] lg:p-[30px]">
                     {active === "#work" ? (
                         <WorkSection />
                     ) : (
                         <RealEstateSection />
                     )}
 
-                    <Divider />
+                    <div className="hidden md:block">
+                        <Divider />
+                    </div>
 
                     <CTASection />
                 </div>

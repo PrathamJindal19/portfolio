@@ -11,9 +11,14 @@ interface NavbarProps {
 
 export default function Navbar({ active, onNavigate }: NavbarProps) {
     return (
-        <header className="w-full sticky top-0 z-30 h-[91px] border-b border-line bg-[#141414] lg:bg-background/80 backdrop-blur-md">
+        <header className="w-full sticky top-0 z-30 h-[91px] bg-[#141414] lg:bg-background/80 backdrop-blur-md">
+            <div className="lg:hidden absolute top-0 left-0 h-[1px] w-full bg-[#292929] shadow-[0px_1px_0px_0px_#000000]" />
+
+            <div className="absolute bottom-0 left-0 h-[1px] w-full bg-[#292929] shadow-[0px_1px_0px_0px_#000000]" />
+
             <nav className="flex h-full items-center justify-center lg:justify-between pl-4 pr-7">
                 <div className="flex items-center">
+
                     {navItems.map((item) => {
                         const isActive = active === item.href;
 
@@ -24,7 +29,7 @@ export default function Navbar({ active, onNavigate }: NavbarProps) {
                                 className="flex flex-col items-center justify-center gap-1 px-3"
                             >
                                 <span
-                                    className={`text-[15px] font-medium leading-[1.5] transition-colors ${
+                                    className={`cursor-pointer text-[15px] font-medium leading-[1.5] transition-colors ${
                                         isActive
                                             ? "text-white"
                                             : "text-grey-59 hover:text-white/80"

@@ -17,15 +17,10 @@ export const profile = {
     // Availability badge shown beneath the pulsing dot in the Sidebar
     spots: "3 Spots Available",
     // Headline rendered as separate spans so each segment can be dimmed independently
-    headline: [
-        { text: "Design for products ", dim: false },
-        { text: "that don't have time to ", dim: true },
-        { text: "look ", dim: true },
-        { text: "average.", dim: false },
-    ],
+    headline: "Design that moves your business forward.",
     // One-liner tagline shown beneath the headline and used in page metadata
     tagline:
-        "Helping SaaS and AI startups turn complex products into websites people understand and remember.",
+        "We help SaaS startups, AI companies, and real estate developers shape intuitive products and compelling digital experiences.",
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -33,10 +28,12 @@ export const profile = {
 // w/h are the intrinsic pixel dimensions of each image file.
 // ─────────────────────────────────────────────────────────────────────────────
 export const clientLogos = [
-    { src: "/assets/client1.webp", alt: "Client logo", w: 141, h: 29 },
-    { src: "/assets/client2.webp", alt: "Client logo", w: 102, h: 24 },
-    { src: "/assets/client4.webp", alt: "Client logo", w:  58, h: 26 },
+    { src: "/clientLogos/FlyingHost.png", alt: "Client logo", w: 136, h: 32 },
+    { src: "/clientLogos/FlyingPress.png", alt: "Client logo", w: 134, h: 27 },
+    { src: "/clientLogos/Sternify.png", alt: "Client logo", w: 95, h: 23 },
+    { src: "/clientLogos/Klink.png", alt: "Client logo", w:  54, h: 25 },
 ];
+
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Work rows — the portfolio gallery in WorkSection.
@@ -403,9 +400,7 @@ export const workRows: WorkRow[] = [
     }
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Nav items — links rendered in the Navbar; hrefs are in-page anchors.
-// ─────────────────────────────────────────────────────────────────────────────
+// NAV ITEMS
 export const navItems = [
     { label: "SaaS", href: "#work" }, // Earlier "Work"
     { label: "Real Estate", href: "#real_estate" }

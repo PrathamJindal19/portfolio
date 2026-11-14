@@ -8,10 +8,14 @@ export default function Sidebar() {
     return (
         // On large screens: fixed 400 px wide, sticky to the viewport top, full height.
         // On mobile: full width, stacks above the main content with a bottom border.
-        <aside className="flex w-full shrink-0 flex-col border-b border-line bg-panel lg:sticky lg:top-0 lg:h-screen lg:w-[400px] lg:border-b-0 lg:border-r">
+        <aside className="relative flex w-full shrink-0 flex-col bg-panel lg:sticky lg:top-0 lg:h-screen lg:w-[400px]">
+            <div className="absolute bottom-0 left-0 h-[1px] w-full bg-[#292929] shadow-[0px_1px_0px_0px_#000000]" />
+            <div className="absolute top-0 right-0 h-full w-[1px] bg-[#292929] shadow-[0px_1px_0px_0px_#000000]" />
 
             {/* ── Profile row ── avatar + greeting + Twitter link ── */}
-            <div className="flex items-center justify-between border-b border-line p-7 h-[91px]">
+            <div className="relative flex items-center justify-between p-7 h-[91px]">
+                <div className="absolute bottom-0 left-0 h-[1px] w-full bg-[#292929] shadow-[0px_1px_0px_0px_#000000]" />
+
                 <div className="flex items-center gap-2.5">
                     {/* Avatar image — 32×32 px, cropped to fill the rounded container */}
                     <span className="relative size-8 shrink-0 overflow-hidden rounded-md">
@@ -51,16 +55,12 @@ export default function Sidebar() {
                 </div>
 
                 {/* H1 headline — rendered as span segments so each part can be dimmed independently */}
-                <h1 className="max-w-[330px] font-serifless text-[32px] leading-[1.15] tracking-[-1.28px]">
-                    {profile.headline.map((part, i) => (
-                        <span key={i} className={part.dim ? "text-white/55" : "text-white"}>
-              {part.text}
-            </span>
-                    ))}
+                <h1 className="max-w-[342px] font-serifless text-[32px] leading-[1.15] tracking-[-1.28px]">
+                    {profile.headline}
                 </h1>
 
                 {/* Short one-liner tagline beneath the headline */}
-                <p className="text-[14px] leading-[1.5] tracking-[-0.14px] text-white/45">
+                <p className="max-w-[342px] text-[14px] leading-[1.5] tracking-[-0.14px] text-white/45">
                     {profile.tagline}
                 </p>
 
@@ -92,16 +92,15 @@ export default function Sidebar() {
                 </p>
 
                 {/* 2-column grid of client logos, each preserving its natural aspect ratio */}
-                <div className="grid grid-cols-2 gap-x-6 gap-y-8">
+                <div className="grid grid-cols-2 max-w-[326px] gap-[24px]">
                     {clientLogos.map((logo, i) => (
-                        <div key={i} className="flex items-center">
+                        <div key={i} className="flex items-center shrink-0 ">
                             <Image
                                 src={logo.src}
                                 alt={logo.alt}
                                 width={logo.w}
                                 height={logo.h}
-                                // Uniform height, auto width, slightly opaque to feel muted
-                                className="h-7 w-auto max-w-full object-contain opacity-90"
+                                className="h-auto w-auto max-w-full object-contain"
                             />
                         </div>
                     ))}
