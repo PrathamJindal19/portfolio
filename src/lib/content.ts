@@ -5,27 +5,22 @@
 // Profile — personal info, social links, and sidebar copy
 // ─────────────────────────────────────────────────────────────────────────────
 export const profile = {
-  name: "Pratham",
-  greeting: "Hi 👋, I'm Pratham",
-  avatar: "/assets/avatar.jpg",
-  twitter: "https://x.com/prathamdesigns",
-  email: "jindalpratham07@gmail.com",
-  // Cal.com booking link slug (used in CTASection)
-  calLink: "pratham-jindal-2026/website",
-  // Cal.com embed namespace — must match the namespace passed to getCalApi()
-  calNamespace: "website",
-  // Availability badge shown beneath the pulsing dot in the Sidebar
-  spots: "3 Spots Available",
-  // Headline rendered as separate spans so each segment can be dimmed independently
-  headline: [
-    { text: "Design for products ", dim: false },
-    { text: "that don't have time to ", dim: true },
-    { text: "look ", dim: true },
-    { text: "average.", dim: false },
-  ],
-  // One-liner tagline shown beneath the headline and used in page metadata
-  tagline:
-    "Helping SaaS and AI startups turn complex products into websites people understand and remember.",
+    name: "Pratham",
+    greeting: "Hi 👋, I'm Pratham",
+    avatar: "/assets/avatar.jpg",
+    twitter: "https://x.com/prathamdesigns",
+    email: "jindalpratham07@gmail.com",
+    // Cal.com booking link slug (used in CTASection)
+    calLink: "pratham-jindal-2026/website",
+    // Cal.com embed namespace — must match the namespace passed to getCalApi()
+    calNamespace: "website",
+    // Availability badge shown beneath the pulsing dot in the Sidebar
+    spots: "3 Spots Available",
+    // Headline rendered as separate spans so each segment can be dimmed independently
+    headline: "Design that moves your business forward.",
+    // One-liner tagline shown beneath the headline and used in page metadata
+    tagline:
+        "We help SaaS startups, AI companies, and real estate developers shape intuitive products and compelling digital experiences.",
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -33,10 +28,12 @@ export const profile = {
 // w/h are the intrinsic pixel dimensions of each image file.
 // ─────────────────────────────────────────────────────────────────────────────
 export const clientLogos = [
-  { src: "/assets/client1.webp", alt: "Client logo", w: 141, h: 29 },
-  { src: "/assets/client2.webp", alt: "Client logo", w: 102, h: 24 },
-  { src: "/assets/client4.webp", alt: "Client logo", w:  58, h: 26 },
+    { src: "/clientLogos/FlyingHost.png", alt: "Client logo", w: 136, h: 32 },
+    { src: "/clientLogos/FlyingPress.png", alt: "Client logo", w: 134, h: 27 },
+    { src: "/clientLogos/Sternify.png", alt: "Client logo", w: 95, h: 23 },
+    { src: "/clientLogos/Klink.png", alt: "Client logo", w:  54, h: 25 },
 ];
+
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Work rows — the portfolio gallery in WorkSection.
@@ -49,363 +46,362 @@ export const clientLogos = [
 // ─────────────────────────────────────────────────────────────────────────────
 type WorkTile = { src: string; alt: string; w: number; h: number };
 type WorkRow =
-  | { type: "pair"; tiles: [WorkTile, WorkTile] }
-  | { type: "full"; tile: WorkTile; bg: string }; // bg is a CSS color string
+    | { type: "pair"; tiles: [WorkTile, WorkTile] }
+    | { type: "full"; tile: WorkTile; bg: string }; // bg is a CSS color string
 
 export const workRows: WorkRow[] = [
-  // ── Featured — Speed SaaS ────────────────────────────────────────────────
-  // Paired by closest aspect ratio to minimise height gaps
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/speed-benefits.webp",
-        "alt": "Performance Benefits & Advantages",
-        "w": 2928,
-        "h": 2662
-      },
-      {
-        "src": "/assets/speed-cta-footer.webp",
-        "alt": "CTA Section & Clean Footer",
-        "w": 2880,
-        "h": 2444
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/speed-hero.webp",
-        "alt": "Premium Speed Optimization Hero Design",
-        "w": 3120,
-        "h": 2542
-      },
-      {
-        "src": "/assets/speed-pricing.webp",
-        "alt": "High Conversion Pricing Structure",
-        "w": 2880,
-        "h": 2088
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/speed-concept-section.webp",
-        "alt": "Concept Section Exploration",
-        "w": 2880,
-        "h": 2078
-      },
-      {
-        "src": "/assets/speed-integrations.webp",
-        "alt": "WordPress Integrations Section",
-        "w": 3120,
-        "h": 1880
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/speed-social-proof.webp",
-        "alt": "Client Social Proof Section",
-        "w": 2880,
-        "h": 1568
-      },
-      {
-        "src": "/assets/sternify-hero-v2.webp",
-        "alt": "Sternify — Alternative Hero Option v2",
-        "w": 2880,
-        "h": 1826
-      }
-    ]
-  },
-  // ── Sternify ─────────────────────────────────────────────────────────────
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/sternify-hero-v2.webp",
-        "alt": "Sternify — Alternative Hero Option v2",
-        "w": 2880,
-        "h": 1826
-      },
-      {
-        "src": "/assets/sternify-affilaite-hero.webp",
-        "alt": "Sternify — Affiliate Program Hero Page",
-        "w": 2880,
-        "h": 1834
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/sternify-footer.webp",
-        "alt": "Sternify — Interactive Modern Footer",
-        "w": 2880,
-        "h": 2306
-      },
-      {
-        "src": "/assets/multi-tool-system-sternify.webp",
-        "alt": "Sternify — Multi-Tool System Architecture",
-        "w": 2880,
-        "h": 2326
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/sternify-illustrations.webp",
-        "alt": "Sternify — Custom Illustration Set",
-        "w": 3488,
-        "h": 2784
-      },
-      {
-        "src": "/assets/hero-option.webp",
-        "alt": "SaaS — Alternative Hero Layout",
-        "w": 2880,
-        "h": 2450
-      }
-    ]
-  },
-  // ── FlyingHost ───────────────────────────────────────────────────────────
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/flyinghost-footer.webp",
-        "alt": "FlyingHost — Footer Interface Design",
-        "w": 3280,
-        "h": 2400
-      },
-      {
-        "src": "/assets/comparison-section-sternify-option-1.webp",
-        "alt": "Sternify — Competitor Comparison Options",
-        "w": 2880,
-        "h": 2206
-      }
-    ]
-  },
+    // ── Featured — Speed SaaS ────────────────────────────────────────────────
+    // Paired by closest aspect ratio to minimise height gaps
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/speed-benefits.webp",
+                "alt": "Performance Benefits & Advantages",
+                "w": 2928,
+                "h": 2662
+            },
+            {
+                "src": "/assets/speed-cta-footer.webp",
+                "alt": "CTA Section & Clean Footer",
+                "w": 2880,
+                "h": 2444
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/speed-hero.webp",
+                "alt": "Premium Speed Optimization Hero Design",
+                "w": 3120,
+                "h": 2542
+            },
+            {
+                "src": "/assets/speed-pricing.webp",
+                "alt": "High Conversion Pricing Structure",
+                "w": 2880,
+                "h": 2088
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/speed-concept-section.webp",
+                "alt": "Concept Section Exploration",
+                "w": 2880,
+                "h": 2078
+            },
+            {
+                "src": "/assets/speed-integrations.webp",
+                "alt": "WordPress Integrations Section",
+                "w": 3120,
+                "h": 1880
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/speed-social-proof.webp",
+                "alt": "Client Social Proof Section",
+                "w": 2880,
+                "h": 1568
+            },
+            {
+                "src": "/assets/sternify-hero-v2.webp",
+                "alt": "Sternify — Alternative Hero Option v2",
+                "w": 2880,
+                "h": 1826
+            }
+        ]
+    },
+    // ── Sternify ─────────────────────────────────────────────────────────────
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/sternify-hero-v2.webp",
+                "alt": "Sternify — Alternative Hero Option v2",
+                "w": 2880,
+                "h": 1826
+            },
+            {
+                "src": "/assets/sternify-affilaite-hero.webp",
+                "alt": "Sternify — Affiliate Program Hero Page",
+                "w": 2880,
+                "h": 1834
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/sternify-footer.webp",
+                "alt": "Sternify — Interactive Modern Footer",
+                "w": 2880,
+                "h": 2306
+            },
+            {
+                "src": "/assets/multi-tool-system-sternify.webp",
+                "alt": "Sternify — Multi-Tool System Architecture",
+                "w": 2880,
+                "h": 2326
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/sternify-illustrations.webp",
+                "alt": "Sternify — Custom Illustration Set",
+                "w": 3488,
+                "h": 2784
+            },
+            {
+                "src": "/assets/hero-option.webp",
+                "alt": "SaaS — Alternative Hero Layout",
+                "w": 2880,
+                "h": 2450
+            }
+        ]
+    },
+    // ── FlyingHost ───────────────────────────────────────────────────────────
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/flyinghost-footer.webp",
+                "alt": "FlyingHost — Footer Interface Design",
+                "w": 3280,
+                "h": 2400
+            },
+            {
+                "src": "/assets/comparison-section-sternify-option-1.webp",
+                "alt": "Sternify — Competitor Comparison Options",
+                "w": 2880,
+                "h": 2206
+            }
+        ]
+    },
 
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/flyinghost-bento.webp",
-        "alt": "FlyingHost — Bento Design Layout",
-        "w": 2880,
-        "h": 2806
-      },
-      {
-        "src": "/assets/final-bento-pink-13-march.webp",
-        "alt": "Bento — Pink Accent Interactive Dashboard Section",
-        "w": 2880,
-        "h": 2958
-      }
-    ]
-  },
-  // ── Bento grids ──────────────────────────────────────────────────────────
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/speed-bento.webp",
-        "alt": "Bento Grid Features Showcase",
-        "w": 2880,
-        "h": 3626
-      },
-      {
-        "src": "/assets/klink-bento.webp",
-        "alt": "Klink — Multi-purpose Bento Grid Features",
-        "w": 2880,
-        "h": 3844
-      }
-    ]
-  },
-  // ── Misc SaaS work ────────────────────────────────────────────────────────
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/problem-section.webp",
-        "alt": "Problem — Pain Point Highlight Section Design",
-        "w": 2880,
-        "h": 1534
-      },
-      {
-        "src": "/assets/system-explanation-section-1.webp",
-        "alt": "Explanatory — System Core Value UI",
-        "w": 2880,
-        "h": 1628
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/illustrations-july-19.webp",
-        "alt": "SaaS — Product Illustration Collection",
-        "w": 3268,
-        "h": 2572
-      },
-      {
-        "src": "/assets/illustrations-july-20.webp",
-        "alt": "SaaS — Feature Illustration Set",
-        "w": 3268,
-        "h": 2572
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/finalised-dashboard-5-june-9.webp",
-        "alt": "Dashboard — June Finalised SaaS UI",
-        "w": 3024,
-        "h": 1958
-      },
-      {
-        "src": "/assets/ecomelixir-comparison.webp",
-        "alt": "EcomElixir — Competitor Comparison Section",
-        "w": 4320,
-        "h": 2901
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/template-2-step-2.webp",
-        "alt": "Step-by-step — Interactive Setup Step 2",
-        "w": 2880,
-        "h": 1784
-      },
-      {
-        "src": "/assets/hero-20.webp",
-        "alt": "SaaS — High-Converting Product Landing Hero",
-        "w": 2884,
-        "h": 1806
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/screen-6-sidepanel.webp",
-        "alt": "Interface — Collapsible Sidebar Panel Feature",
-        "w": 3036,
-        "h": 1970
-      },
-      {
-        "src": "/assets/integration-section-socify.webp",
-        "alt": "Socify — API Integrations Section",
-        "w": 2880,
-        "h": 1874
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/system-explanation-section.webp",
-        "alt": "Explanatory — System Workflow Diagram UI",
-        "w": 2880,
-        "h": 1944
-      },
-      {
-        "src": "/assets/how-it-works-step-1.webp",
-        "alt": "Step-by-step — How It Works Onboarding Layout",
-        "w": 2876,
-        "h": 1962
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/comparison-concept.webp",
-        "alt": "Comparison — Comparison Grid Feature Design",
-        "w": 2880,
-        "h": 2018
-      },
-      {
-        "src": "/assets/footer-socify.webp",
-        "alt": "Socify — Bottom Navigation and Footer",
-        "w": 3184,
-        "h": 2288
-      }
-    ]
-  },
-  // ── Socify / SageBio ─────────────────────────────────────────────────────
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/hero-1-sagebio.webp",
-        "alt": "SageBio — Biotech SaaS Landing Hero",
-        "w": 2880,
-        "h": 2244
-      },
-      {
-        "src": "/assets/simplicity-section.webp",
-        "alt": "SaaS — Simplicity & Clarity Section Design",
-        "w": 2880,
-        "h": 2282
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/hero-section-socify.webp",
-        "alt": "Socify — Social SaaS Hero UI",
-        "w": 3184,
-        "h": 2588
-      },
-      {
-        "src": "/assets/footer-13.webp",
-        "alt": "SaaS — Footer and Links Option 13",
-        "w": 2880,
-        "h": 2380
-      }
-    ]
-  },
-  {
-    "type": "pair",
-    "tiles": [
-      {
-        "src": "/assets/unicorn hero 13 apr.webp",
-        "alt": "Unicorn — SaaS Hero Section Design",
-        "w": 3280,
-        "h": 2260
-      },
-      {
-        "src": "/assets/hero-flyinghost.webp",
-        "alt": "FlyingHost — Hosting Service Hero Showcase",
-        "w": 3280,
-        "h": 2422
-      }
-    ]
-  }
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/flyinghost-bento.webp",
+                "alt": "FlyingHost — Bento Design Layout",
+                "w": 2880,
+                "h": 2806
+            },
+            {
+                "src": "/assets/final-bento-pink-13-march.webp",
+                "alt": "Bento — Pink Accent Interactive Dashboard Section",
+                "w": 2880,
+                "h": 2958
+            }
+        ]
+    },
+    // ── Bento grids ──────────────────────────────────────────────────────────
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/speed-bento.webp",
+                "alt": "Bento Grid Features Showcase",
+                "w": 2880,
+                "h": 3626
+            },
+            {
+                "src": "/assets/klink-bento.webp",
+                "alt": "Klink — Multi-purpose Bento Grid Features",
+                "w": 2880,
+                "h": 3844
+            }
+        ]
+    },
+    // ── Misc SaaS work ────────────────────────────────────────────────────────
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/problem-section.webp",
+                "alt": "Problem — Pain Point Highlight Section Design",
+                "w": 2880,
+                "h": 1534
+            },
+            {
+                "src": "/assets/system-explanation-section-1.webp",
+                "alt": "Explanatory — System Core Value UI",
+                "w": 2880,
+                "h": 1628
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/illustrations-july-19.webp",
+                "alt": "SaaS — Product Illustration Collection",
+                "w": 3268,
+                "h": 2572
+            },
+            {
+                "src": "/assets/illustrations-july-20.webp",
+                "alt": "SaaS — Feature Illustration Set",
+                "w": 3268,
+                "h": 2572
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/finalised-dashboard-5-june-9.webp",
+                "alt": "Dashboard — June Finalised SaaS UI",
+                "w": 3024,
+                "h": 1958
+            },
+            {
+                "src": "/assets/ecomelixir-comparison.webp",
+                "alt": "EcomElixir — Competitor Comparison Section",
+                "w": 4320,
+                "h": 2901
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/template-2-step-2.webp",
+                "alt": "Step-by-step — Interactive Setup Step 2",
+                "w": 2880,
+                "h": 1784
+            },
+            {
+                "src": "/assets/hero-20.webp",
+                "alt": "SaaS — High-Converting Product Landing Hero",
+                "w": 2884,
+                "h": 1806
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/screen-6-sidepanel.webp",
+                "alt": "Interface — Collapsible Sidebar Panel Feature",
+                "w": 3036,
+                "h": 1970
+            },
+            {
+                "src": "/assets/integration-section-socify.webp",
+                "alt": "Socify — API Integrations Section",
+                "w": 2880,
+                "h": 1874
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/system-explanation-section.webp",
+                "alt": "Explanatory — System Workflow Diagram UI",
+                "w": 2880,
+                "h": 1944
+            },
+            {
+                "src": "/assets/how-it-works-step-1.webp",
+                "alt": "Step-by-step — How It Works Onboarding Layout",
+                "w": 2876,
+                "h": 1962
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/comparison-concept.webp",
+                "alt": "Comparison — Comparison Grid Feature Design",
+                "w": 2880,
+                "h": 2018
+            },
+            {
+                "src": "/assets/footer-socify.webp",
+                "alt": "Socify — Bottom Navigation and Footer",
+                "w": 3184,
+                "h": 2288
+            }
+        ]
+    },
+    // ── Socify / SageBio ─────────────────────────────────────────────────────
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/hero-1-sagebio.webp",
+                "alt": "SageBio — Biotech SaaS Landing Hero",
+                "w": 2880,
+                "h": 2244
+            },
+            {
+                "src": "/assets/simplicity-section.webp",
+                "alt": "SaaS — Simplicity & Clarity Section Design",
+                "w": 2880,
+                "h": 2282
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/hero-section-socify.webp",
+                "alt": "Socify — Social SaaS Hero UI",
+                "w": 3184,
+                "h": 2588
+            },
+            {
+                "src": "/assets/footer-13.webp",
+                "alt": "SaaS — Footer and Links Option 13",
+                "w": 2880,
+                "h": 2380
+            }
+        ]
+    },
+    {
+        "type": "pair",
+        "tiles": [
+            {
+                "src": "/assets/unicorn hero 13 apr.webp",
+                "alt": "Unicorn — SaaS Hero Section Design",
+                "w": 3280,
+                "h": 2260
+            },
+            {
+                "src": "/assets/hero-flyinghost.webp",
+                "alt": "FlyingHost — Hosting Service Hero Showcase",
+                "w": 3280,
+                "h": 2422
+            }
+        ]
+    }
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Nav items — links rendered in the Navbar; hrefs are in-page anchors.
-// ─────────────────────────────────────────────────────────────────────────────
+// NAV ITEMS
 export const navItems = [
-  { label: "Work", href: "#work" },
+    { label: "SaaS", href: "#work" }, // Earlier "Work"
+    { label: "Real Estate", href: "#real_estate" }
 ];
