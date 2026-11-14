@@ -28,6 +28,9 @@ const title = "Pratham — Designing Websites for SaaS & AI Startups";
 const description =
     "Helping SaaS and AI startups turn complex products into websites people understand and remember.";
 
+// New filename = fresh fetch (bypasses WhatsApp / CDN cache of the old file)
+const ogImage = "/og-image-v2.jpg"; // 1200x630 JPG, under 300 KB
+
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
     title,
@@ -43,7 +46,7 @@ export const metadata: Metadata = {
         locale: "en_US",
         images: [
             {
-                url: "/og-image.jpg", // 1200x630 JPG, under 300 KB
+                url: ogImage,
                 width: 1200,
                 height: 630,
                 type: "image/jpeg",
@@ -56,7 +59,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title,
         description,
-        images: ["/og-image.jpg"],
+        images: [ogImage],
     },
 };
 
