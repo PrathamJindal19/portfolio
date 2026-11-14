@@ -7,7 +7,7 @@
 export const profile = {
     name: "Pratham",
     greeting: "Hi 👋, I'm Pratham",
-    avatar: "/assets/avatar.jpg",
+    avatar: "/ProfileU.png",
     twitter: "https://x.com/prathamdesigns",
     email: "jindalpratham07@gmail.com",
     // Cal.com booking link slug (used in CTASection)
