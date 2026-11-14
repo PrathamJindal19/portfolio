@@ -11,7 +11,7 @@ interface NavbarProps {
 
 export default function Navbar({ active, onNavigate }: NavbarProps) {
     return (
-        <header className="w-full sticky top-0 z-30 h-[91px] bg-[#141414] lg:bg-background/80 backdrop-blur-md">
+        <header className="w-full md:sticky top-0 z-30 h-[91px] bg-[#141414] lg:bg-background/80 backdrop-blur-md">
             <div className="lg:hidden absolute top-0 left-0 h-[1px] w-full bg-[#292929] shadow-[0px_1px_0px_0px_#000000]" />
 
             <div className="absolute bottom-0 left-0 h-[1px] w-full bg-[#292929] shadow-[0px_1px_0px_0px_#000000]" />

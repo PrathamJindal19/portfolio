@@ -7,7 +7,7 @@
 export const profile = {
     name: "Pratham",
     greeting: "Hi 👋, I'm Pratham",
-    avatar: "/ProfileU.png",
+    avatar: "/assets/avatar.jpg",
     twitter: "https://x.com/prathamdesigns",
     email: "jindalpratham07@gmail.com",
     // Cal.com booking link slug (used in CTASection)
@@ -402,6 +402,6 @@ export const workRows: WorkRow[] = [
 
 // NAV ITEMS
 export const navItems = [
-    { label: "SaaS", href: "#work" }, // Earlier "Work"
+    { label: "SaaS & AI", href: "#work" }, // Earlier "Work"
     { label: "Real Estate", href: "#real_estate" }
 ];
