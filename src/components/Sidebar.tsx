@@ -9,7 +9,7 @@ export default function Sidebar() {
         // On large screens: fixed 400 px wide, sticky to the viewport top, full height.
         // On mobile: full width, stacks above the main content with a bottom border.
         <aside className="relative flex w-full shrink-0 flex-col bg-panel lg:sticky lg:top-0 lg:h-screen lg:w-[400px]">
-            <div className="absolute bottom-0 left-0 h-[1px] w-full bg-[#292929] shadow-[0px_1px_0px_0px_#000000]" />
+            <div className="hidden md:block absolute bottom-0 left-0 h-[1px] w-full bg-[#292929] shadow-[0px_1px_0px_0px_#000000]" />
             <div className="absolute top-0 right-0 h-full w-[1px] bg-[#292929] shadow-[0px_1px_0px_0px_#000000]" />
 
             {/* ── Profile row ── avatar + greeting + Twitter link ── */}
