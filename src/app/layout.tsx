@@ -24,12 +24,11 @@ const caveat = Caveat({
 // Must match the FINAL domain exactly (no redirect), including www.
 const siteUrl = "https://www.pratham.me";
 
-const title = "Pratham — Designing Websites for SaaS & AI Startups";
+const title = "Pratham — Design that moves your business forward.";
 const description =
-    "Helping SaaS and AI startups turn complex products into websites people understand and remember.";
+    "We help SaaS startups, AI companies, and real estate developers shape intuitive products and compelling digital experiences.";
 
-// New filename = fresh fetch (bypasses WhatsApp / CDN cache of the old file)
-const ogImage = "/og-image-v2.jpg"; // 1200x630 JPG, under 300 KB
+const ogImage = "/og-image-v2.jpg";
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
